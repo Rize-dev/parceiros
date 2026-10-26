@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ganhe 50% recorrente enquanto seu cliente estiver ativo. Programa de Parceiros MULTSET - Tecnologia, IA e Automação.">
+    <title>MULTSET Partners | 50% Recorrente + Gestão Operacional de Clientes</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0a0e27;
+            --secondary: #1a1f3a;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --cyan: #06b6d4;
+            --purple: #a855f7;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --gold: #fbbf24;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+            --gradient-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            --gradient-dark: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a5f 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-light);
+        }
+
+        .nav-cta {
+            background: var(--gradient);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.5);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text);
+            border-radius: 3px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 2rem 4rem;
+            background: var(--gradient-dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g"><stop offset="0%" stop-color="%236366f1" stop-opacity="0.15"/><stop offset="100%" stop-color="transparent" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23g)"/><circle cx="800" cy="800" r="400" fill="url(%23g)"/></svg>');
+            opacity: 0.5;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text h1 .gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-highlight {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.4);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-highlight-icon {
+            font-size: 2rem;
+        }
+
+        .hero-highlight-text {
+            font-size: 1rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-badge {
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: var(--accent-light);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+        }
+
+        .btn-gold {
+            background: var(--gradient-gold);
+            color: #1a1f3a;
+            padding: 1.2rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            padding: 1.2rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid rgba(99, 102, 241, 0.5);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-value.gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Como Funciona - Modelo de Responsabilidades */
+        .how-it-works {
+            background: var(--secondary);
+            border-radius: 30px;
+            padding: 4rem;
+            margin: 4rem auto;
+        }
+
+        .responsibility-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .responsibility-card {
+            background: var(--primary);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 2px solid;
+            position: relative;
+        }
+
+        .responsibility-card.partner {
+            border-color: var(--gold);
+        }
+
+        .responsibility-card.partner::before {
+            content: 'PARCEIRO (50%)';
+            position: absolute;
+            top: -12px;
+            left: 2rem;
+            background: var(--gradient-gold);
+            color: #1a1f3a;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .responsibility-card.multset {
+            border-color: var(--accent);
+        }
+
+        .responsibility-card.multset::before {
+            content: 'MULTSET';
+            position: absolute;
+            top: -12px;
+            left: 2rem;
+            background: var(--gradient);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .responsibility-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .responsibility-card.partner h3 {
+            color: var(--gold);
+        }
+
+        .responsibility-card.multset h3 {
+            color: var(--accent-light);
+        }
+
+        .responsibility-list {
+            list-style: none;
+        }
+
+        .responsibility-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .responsibility-list li:last-child {
+            border-bottom: none;
+        }
+
+        .responsibility-list li .icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: var(--primary);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            border: 2px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: var(--gradient);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-light);
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Modalidades */
+        .modalities-section {
+            background: var(--gradient-dark);
+            border-radius: 30px;
+            padding: 4rem;
+            margin: 4rem auto;
+        }
+
+        .modality-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .modality-card {
+            background: var(--primary);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            border: 3px solid;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .modality-card.indicator {
+            border-color: var(--cyan);
+        }
+
+        .modality-card.operational {
+            border-color: var(--gold);
+            transform: scale(1.03);
+        }
+
+        .modality-card.operational::before {
+            content: 'MAIS RENTÁVEL';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-gold);
+            color: #1a1f3a;
+            padding: 0.4rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .modality-percentage {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .modality-card.indicator .modality-percentage {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modality-card.operational .modality-percentage {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modality-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modality-card.indicator h3 {
+            color: var(--cyan);
+        }
+
+        .modality-card.operational h3 {
+            color: var(--gold);
+        }
+
+        .modality-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .modality-features {
+            text-align: left;
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .modality-features li {
+            padding: 0.7rem 0;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .modality-features li .check {
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .modality-highlight {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .modality-highlight h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .modality-highlight .example-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        .modality-highlight .example-row:last-child {
+            border-bottom: none;
+        }
+
+        .modality-highlight .example-row span:last-child {
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        /* Para Quem é */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: var(--secondary);
+            padding: 3rem;
+            border-radius: 20px;
+            border-left: 5px solid;
+            transition: all 0.3s;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .audience-card.business {
+            border-left-color: var(--gold);
+        }
+
+        .audience-card.individual {
+            border-left-color: var(--purple);
+        }
+
+        .audience-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .audience-card.business h3 {
+            color: var(--gold);
+        }
+
+        .audience-card.individual h3 {
+            color: var(--purple);
+        }
+
+        .audience-card > p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-card ul {
+            list-style: none;
+        }
+
+        .audience-card ul li {
+            padding: 0.7rem 0;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .audience-card ul li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .business-perks {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .business-perks h4 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .business-perks ul {
+            list-style: none;
+        }
+
+        .business-perks ul li {
+            padding: 0.5rem 0;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .business-perks ul li::before {
+            content: '★';
+            color: var(--gold);
+            margin-right: 0.5rem;
+        }
+
+        /* O que Entregamos */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .portfolio-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .portfolio-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-light);
+        }
+
+        .portfolio-card ul {
+            list-style: none;
+        }
+
+        .portfolio-card ul li {
+            padding: 0.5rem 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .price-tag {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--accent-light);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Simulador de Ganhos */
+        .earnings-section {
+            background: var(--secondary);
+            border-radius: 30px;
+            padding: 4rem;
+            margin: 4rem auto;
+        }
+
+        .earnings-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .earning-calc {
+            background: var(--primary);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .earning-calc h4 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 10px;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .calc-row.total {
+            background: var(--gradient-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1a1f3a;
+        }
+
+        .calc-row.total span {
+            color: #1a1f3a;
+        }
+
+        .earnings-visual {
+            background: var(--primary);
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+
+        .earnings-visual h3 {
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .earning-benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--gold);
+        }
+
+        .earning-benefit .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .earning-benefit h4 {
+            color: var(--text);
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .earning-benefit p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient);
+            padding: 5rem 3rem;
+            border-radius: 30px;
+            text-align: center;
+            margin: 6rem auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--accent);
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--secondary);
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.8rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .faq-answer {
+            padding: 0 1.8rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.8rem 1.8rem;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-light);
+        }
+
+        /* Trust badges */
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .trust-badge-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .responsibility-grid,
+            .modality-grid,
+            .audience-grid,
+            .earnings-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .modality-card.operational {
+                transform: scale(1);
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .how-it-works,
+            .modalities-section,
+            .earnings-section {
+                padding: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">MULTSET</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#modelo">Modelo</a></li>
+                <li><a href="#modalidades">Modalidades</a></li>
+                <li><a href="#para-quem">Para Quem</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#ganhos">Ganhos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#cadastro" class="nav-cta">Ser Parceiro</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badges">
+                    <span class="hero-badge">🤖 IA</span>
+                    <span class="hero-badge">⚡ Automação</span>
+                    <span class="hero-badge">💻 Tecnologia</span>
+                </div>
+                <h1>Ganhe <span class="gold">50% recorrente</span> enquanto seu cliente estiver ativo</h1>
+                <p class="subtitle">Você gere o cliente operacionalmente. A MULTSET entrega a tecnologia. Ambos lucram juntos — para sempre.</p>
+                
+                <div class="hero-highlight">
+                    <div class="hero-highlight-icon">💰</div>
+                    <div class="hero-highlight-text">
+                        Parceiro 50% recebe comissão TODOS OS MESES enquanto o cliente estiver conosco. Sem limite de tempo.
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#cadastro" class="btn-gold">
+                        🚀 Quero Ser Parceiro 50%
+                    </a>
+                    <a href="#modelo" class="btn-secondary">
+                        ▶️ Ver Como Funciona
+                    </a>
+                </div>
+
+                <div class="stats-bar">
+                    <div class="stat">
+                        <div class="stat-value gold">50%</div>
+                        <div class="stat-label">Comissão Recorrente</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">Enquanto Cliente Ativo</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">PIX</div>
+                        <div class="stat-label">Pagamento Mensal</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">R$0</div>
+                        <div class="stat-label">Investimento</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://image.pollinations.ai/prompt/Modern%20futuristic%20technology%20workspace%20with%20holographic%20AI%20interface%2C%20dark%20navy%20blue%20background%20with%20purple%20and%20cyan%20neon%20accents%2C%20professional%20corporate%20technology%20aesthetic" alt="MULTSET Technology">
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona - Modelo de Responsabilidades -->
+    <section id="modelo" class="how-it-works">
+        <div class="section-header">
+            <h2>Nosso <span>Modelo de Parceria</span></h2>
+            <p>Divisão clara de responsabilidades para máxima eficiência</p>
+        </div>
+        
+        <div class="responsibility-grid">
+            <div class="responsibility-card partner">
+                <h3>🎯 Responsabilidades do Parceiro (50%)</h3>
+                <ul class="responsibility-list">
+                    <li>
+                        <span class="icon"></span>
+                        <span><strong>Gestão do relacionamento</strong> com o cliente</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span><strong>Primeiro nível de suporte</strong> — contato direto</span>
+                    </li>
+                    <li>
+                        <span class="icon">📊</span>
+                        <span><strong>Acompanhamento</strong> de resultados e métricas</span>
+                    </li>
+                    <li>
+                        <span class="icon">🔄</span>
+                        <span><strong>Upsell e renovação</strong> — identificar novas oportunidades</span>
+                    </li>
+                    <li>
+                        <span class="icon">🤝</span>
+                        <span><strong>Reuniões periódicas</strong> com o cliente</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span><strong>Operação comercial</strong> — você é o rosto do cliente</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="responsibility-card multset">
+                <h3>⚙️ Responsabilidades da MULTSET</h3>
+                <ul class="responsibility-list">
+                    <li>
+                        <span class="icon">️</span>
+                        <span><strong>Entrega técnica</strong> de todos os serviços vendidos</span>
+                    </li>
+                    <li>
+                        <span class="icon">🤖</span>
+                        <span><strong>Desenvolvimento</strong> de IA, automações e sistemas</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span><strong>Criação</strong> de sites, design e marketing</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span><strong>Suporte técnico</strong> de segundo nível</span>
+                    </li>
+                    <li>
+                        <span class="icon">📈</span>
+                        <span><strong>Infraestrutura</strong> e hospedagem</span>
+                    </li>
+                    <li>
+                        <span class="icon">💳</span>
+                        <span><strong>Pagamento das comissões</strong> via PIX todo mês</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Você Vende</h3>
+                <p>Indica e fecha o cliente com nossos produtos</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Nós Entregamos</h3>
+                <p>Desenvolvemos e implementamos tudo</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Você Gere</h3>
+                <p>Cuida do relacionamento operacional</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <h3>Ambos Lucram</h3>
+                <p>50% recorrente enquanto o cliente estiver ativo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section id="modalidades" class="modalities-section">
+        <div class="section-header">
+            <h2>Escolha Sua <span>Modalidade</span></h2>
+            <p>Duas formas de parceria, uma para cada perfil</p>
+        </div>
+        
+        <div class="modality-grid">
+            <div class="modality-card indicator">
+                <div class="modality-percentage">30%</div>
+                <h3>Indicador</h3>
+                <p>Você indica o cliente, nós fazemos tudo. Comissão única na venda.</p>
+                
+                <ul class="modality-features">
+                    <li><span class="check">✓</span> Apenas indica o lead</li>
+                    <li><span class="check">✓</span> MULTSET fecha a venda</li>
+                    <li><span class="check">✓</span> MULTSET gere o cliente</li>
+                    <li><span class="check">✓</span> Comissão de 30% na venda</li>
+                    <li><span class="check">✓</span> Ideal para quem tem rede de contatos</li>
+                </ul>
+
+                <div class="modality-highlight">
+                    <h4> Exemplo de Ganhos:</h4>
+                    <div class="example-row">
+                        <span>Venda de R$ 5.000</span>
+                        <span>R$ 1.500</span>
+                    </div>
+                    <div class="example-row">
+                        <span>Venda de R$ 10.000</span>
+                        <span>R$ 3.000</span>
+                    </div>
+                    <div class="example-row">
+                        <span>Venda de R$ 20.000</span>
+                        <span>R$ 6.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modality-card operational">
+                <div class="modality-percentage">50%</div>
+                <h3>Operacional (Gestor de Conta)</h3>
+                <p>Você vende E gere o cliente. Comissão recorrente vitalícia.</p>
+                
+                <ul class="modality-features">
+                    <li><span class="check">✓</span> Vende e fecha o cliente</li>
+                    <li><span class="check">✓</span> Gere operacionalmente o cliente</li>
+                    <li><span class="check">✓</span> Primeiro nível de suporte</li>
+                    <li><span class="check">✓</span> <strong>50% TODO MÊS</strong> enquanto cliente ativo</li>
+                    <li><span class="check">✓</span> Upsell = mais comissão</li>
+                    <li><span class="check">✓</span> Ideal para quem quer renda recorrente</li>
+                </ul>
+
+                <div class="modality-highlight">
+                    <h4> Exemplo de Ganhos Recorrentes:</h4>
+                    <div class="example-row">
+                        <span>Cliente de R$ 2.000/mês</span>
+                        <span>R$ 1.000/mês</span>
+                    </div>
+                    <div class="example-row">
+                        <span>Cliente de R$ 5.000/mês</span>
+                        <span>R$ 2.500/mês</span>
+                    </div>
+                    <div class="example-row">
+                        <span>10 clientes de R$ 2.000</span>
+                        <span>R$ 10.000/mês</span>
+                    </div>
+                    <div class="example-row">
+                        <span><strong>Em 12 meses</strong></span>
+                        <span><strong>R$ 120.000</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para Quem é -->
+    <section id="para-quem">
+        <div class="section-header">
+            <h2>Para <span>Quem é</span></h2>
+            <p>Empresas e profissionais autônomos têm benefícios específicos</p>
+        </div>
+        
+        <div class="audience-grid">
+            <div class="audience-card business">
+                <h3>🏢 Para Empresas</h3>
+                <p>Agências, consultorias, escritórios e empresas de TI que querem escalar oferecendo tecnologia sem investir em equipe técnica.</p>
+                <ul>
+                    <li>50% recorrente em todos os clientes</li>
+                    <li>Acesso aos sistemas MULTSET</li>
+                    <li>Equipe de prospecção à disposição</li>
+                    <li>White-label disponível</li>
+                    <li>Suporte B2B dedicado</li>
+                    <li>Treinamento para sua equipe</li>
+                </ul>
+
+                <div class="business-perks">
+                    <h4>★ Benefícios Exclusivos para Empresas:</h4>
+                    <ul>
+                        <li>Uso dos nossos sistemas de gestão</li>
+                        <li>IA de prospecção para gerar leads</li>
+                        <li>Equipe comercial de apoio</li>
+                        <li>Dashboard de acompanhamento</li>
+                        <li>Gerente de conta dedicado</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="audience-card individual">
+                <h3>👤 Para Pessoas</h3>
+                <p>Profissionais liberais, freelancers, consultores e empreendedores que querem construir uma renda recorrente sólida.</p>
+                <ul>
+                    <li>50% recorrente vitalício</li>
+                    <li>Trabalhe de onde quiser</li>
+                    <li>Sem chefe ou horário fixo</li>
+                    <li>Treinamento gratuito</li>
+                    <li>Suporte individual</li>
+                    <li>Comissões via PIX todo mês</li>
+                </ul>
+
+                <div class="business-perks" style="background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.3);">
+                    <h4 style="color: var(--purple);">★ Benefícios para Pessoas:</h4>
+                    <ul>
+                        <li>Acesso à IA de prospecção</li>
+                        <li>Materiais de venda prontos</li>
+                        <li>Grupo exclusivo de parceiros</li>
+                        <li>Certificações gratuitas</li>
+                        <li>Comunidade de suporte</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <div class="trust-badge-icon">✓</div>
+                <span>Sem taxa de adesão</span>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">✓</div>
+                <span>Sem mensalidade</span>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">✓</div>
+                <span>Sem fidelidade</span>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">✓</div>
+                <span>Comissão vitalícia</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que Entregamos -->
+    <section id="servicos">
+        <div class="section-header">
+            <h2>O que <span>Entregamos</span></h2>
+            <p>Produtos de alta demanda que seus clientes precisam</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-icon">🤖</div>
+                <h3>Agentes de IA</h3>
+                <ul>
+                    <li>Escritório Virtual com 10 salas</li>
+                    <li>Marketing, Vendas, RH, Financeiro</li>
+                    <li>Prompts personalizados</li>
+                    <li>Integração com LLMs gratuitas</li>
+                </ul>
+                <span class="price-tag">R$ 5k - R$ 15k + R$ 200-500/mês</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-icon"></div>
+                <h3>Automações</h3>
+                <ul>
+                    <li>Captura automática de leads</li>
+                    <li>Follow-up 24/7</li>
+                    <li>Propostas automáticas</li>
+                    <li>Fluxos n8n e low-code</li>
+                </ul>
+                <span class="price-tag">R$ 1k - R$ 10k + manutenção</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-icon">🌐</div>
+                <h3>Sites & Landing Pages</h3>
+                <ul>
+                    <li>Sites institucionais</li>
+                    <li>Landing pages de alta conversão</li>
+                    <li>Design responsivo</li>
+                    <li>SEO otimizado</li>
+                </ul>
+                <span class="price-tag">R$ 800 - R$ 5k + hospedagem</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-icon"></div>
+                <h3>Sistemas & SaaS</h3>
+                <ul>
+                    <li>Sistema de gestão</li>
+                    <li>Área do cliente</li>
+                    <li>Controle financeiro</li>
+                    <li>MVP para escalar</li>
+                </ul>
+                <span class="price-tag">R$ 5k - R$ 50k + mensalidade</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-icon">📢</div>
+                <h3>Marketing Digital</h3>
+                <ul>
+                    <li>Estratégia de funil</li>
+                    <li>Copywriting</li>
+                    <li>Lançamentos</li>
+                    <li>Tráfego pago</li>
+                </ul>
+                <span class="price-tag">R$ 2k - R$ 10k + gestão mensal</span>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-icon">🌍</div>
+                <h3>Mercado Internacional</h3>
+                <ul>
+                    <li>Clientes em dólar/euro</li>
+                    <li>Produtos digitais</li>
+                    <li>SaaS white-label</li>
+                    <li>Suporte multilíngue</li>
+                </ul>
+                <span class="price-tag">USD 2k - USD 10k</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulador de Ganhos -->
+    <section id="ganhos" class="earnings-section">
+        <div class="section-header">
+            <h2>Simule Seus <span>Ganhos Recorrentes</span></h2>
+            <p>Veja o poder da comissão vitalícia de 50%</p>
+        </div>
+
+        <div class="earnings-showcase">
+            <div>
+                <div class="earning-calc">
+                    <h4>📊 Cenário Realista — 6 Meses</h4>
+                    <div class="calc-row">
+                        <span>5 clientes de R$ 2.000/mês</span>
+                        <span>R$ 10.000/mês faturamento</span>
+                    </div>
+                    <div class="calc-row">
+                        <span>Sua comissão (50%)</span>
+                        <span>R$ 5.000/mês</span>
+                    </div>
+                    <div class="calc-row">
+                        <span>+ 2 vendas pontuais de R$ 5.000</span>
+                        <span>R$ 5.000 (uma vez)</span>
+                    </div>
+                    <div class="calc-row total">
+                        <span>Receita mensal recorrente</span>
+                        <span>R$ 5.000/mês</span>
+                    </div>
+                </div>
+
+                <div class="earning-calc">
+                    <h4>🚀 Cenário Moderado — 12 Meses</h4>
+                    <div class="calc-row">
+                        <span>15 clientes de R$ 3.000/mês</span>
+                        <span>R$ 45.000/mês faturamento</span>
+                    </div>
+                    <div class="calc-row">
+                        <span>Sua comissão (50%)</span>
+                        <span>R$ 22.500/mês</span>
+                    </div>
+                    <div class="calc-row">
+                        <span>+ 4 vendas pontuais</span>
+                        <span>R$ 20.000 (uma vez)</span>
+                    </div>
+                    <div class="calc-row total">
+                        <span>Receita mensal recorrente</span>
+                        <span>R$ 22.500/mês</span>
+                    </div>
+                </div>
+
+                <div class="earning-calc">
+                    <h4>💎 Cenário Avançado — 24 Meses</h4>
+                    <div class="calc-row">
+                        <span>30 clientes de R$ 4.000/mês</span>
+                        <span>R$ 120.000/mês faturamento</span>
+                    </div>
+                    <div class="calc-row">
+                        <span>Sua comissão (50%)</span>
+                        <span>R$ 60.000/mês</span>
+                    </div>
+                    <div class="calc-row total">
+                        <span>Receita mensal recorrente</span>
+                        <span>R$ 60.000/mês</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="earnings-visual">
+                <h3>Por que o modelo 50% é poderoso?</h3>
+                
+                <div class="earning-benefit">
+                    <div class="icon">💰</div>
+                    <div>
+                        <h4>Comissão Vitalícia</h4>
+                        <p>Você recebe 50% TODO MÊS enquanto o cliente estiver ativo. Sem limite de tempo.</p>
+                    </div>
+                </div>
+
+                <div class="earning-benefit">
+                    <div class="icon">📈</div>
+                    <div>
+                        <h4>Efeito Bola de Neve</h4>
+                        <p>Cada novo cliente aumenta sua renda fixa. Em 12 meses, você tem uma carteira sólida.</p>
+                    </div>
+                </div>
+
+                <div class="earning-benefit">
+                    <div class="icon"></div>
+                    <div>
+                        <h4>Upsell Constante</h4>
+                        <p>Cliente quer mais? Você vende mais e ganha mais. Sem teto de ganhos.</p>
+                    </div>
+                </div>
+
+                <div class="earning-benefit">
+                    <div class="icon">🛡️</div>
+                    <div>
+                        <h4>Segurança</h4>
+                        <p>MULTSET entrega a tecnologia. Você foca no relacionamento. Ambos ganham.</p>
+                    </div>
+                </div>
+
+                <div class="earning-benefit">
+                    <div class="icon">🏢</div>
+                    <div>
+                        <h4>Para Empresas</h4>
+                        <p>Use nossos sistemas e equipe de prospecção para escalar mais rápido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="cadastro" class="cta-section">
+        <div class="cta-content">
+            <h2>Pronto para Construir sua Renda Recorrente?</h2>
+            <p>Cadastre-se agora e comece a ganhar 50% todo mês. É grátis, rápido e sem compromisso.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn-white" onclick="alert('Formulário de cadastro será aberto aqui'); return false;">
+                     Quero Ser Parceiro 50%
+                </a>
+                <a href="#" class="btn-outline-white" onclick="alert('WhatsApp de suporte será aberto'); return false;">
+                    💬 Tirar Dúvidas
+                </a>
+            </div>
+
+            <div style="margin-top: 3rem; display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; color: rgba(255,255,255,0.9);">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800;">2min</div>
+                    <div style="font-size: 0.9rem;">Para se cadastrar</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800;">24h</div>
+                    <div style="font-size: 0.9rem;">Para aprovação</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800;">R$0</div>
+                    <div style="font-size: 0.9rem;">Investimento</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem; font-weight: 800;">∞</div>
+                    <div style="font-size: 0.9rem;">Comissão Recorrente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="section-header">
+            <h2>Dúvidas <span>Frequentes</span></h2>
+            <p>Tire suas dúvidas sobre o programa</p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>O que significa "50% recorrente vitalício"?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Significa que você recebe 50% do valor que o cliente paga TODO MÊS, enquanto ele estiver ativo na MULTSET. Não há limite de tempo. Se o cliente ficar 5 anos, você recebe 5 anos. Se ficar 10 anos, você recebe 10 anos.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>O que é "gestão operacional" do cliente?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>É você ser o ponto de contato principal do cliente. Você faz reuniões periódicas, acompanha resultados, identifica novas oportunidades (upsell) e resolve questões do dia a dia. A MULTSET cuida da parte técnica (entrega, suporte técnico, infraestrutura).</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Quais benefícios exclusivos empresas parceiras recebem?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Empresas parceiras têm acesso aos sistemas MULTSET (CRM, gestão, etc.), equipe de prospecção para gerar leads, white-label (vender com sua marca), gerente de conta dedicado e treinamento para sua equipe comercial.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>E se o cliente cancelar?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Se o cliente cancelar, você para de receber a comissão mensal daquele cliente. Porém, todos os outros clientes ativos continuam gerando sua comissão. Por isso é importante manter um bom relacionamento operacional.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Preciso ter experiência técnica?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Não! A MULTSET cuida de toda a parte técnica. Você precisa de habilidades comerciais e de relacionamento. Nós treinamos você gratuitamente em vendas, gestão de clientes e uso das ferramentas.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Como e quando recebo?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Você recebe via PIX até o 5º dia útil de cada mês, referente aos pagamentos dos clientes ativos no mês anterior. Tudo transparente pelo portal do parceiro.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Posso migrar de Indicador (30%) para Operacional (50%)?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sim! Você pode começar como Indicador e, quando se sentir confortável, assumir a gestão operacional dos clientes e migrar para 50% recorrente. Fale com seu gerente de parceiros.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Existe custo para entrar?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Não! O cadastro é 100% gratuito. Sem taxa de adesão, sem mensalidade, sem fidelidade. Você só ganha quando vende.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MULTSET</h4>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">Tecnologia • IA • Automação • Desenvolvimento</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Construindo o futuro dos negócios com inteligência artificial e automação.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Programa</h4>
+                <ul>
+                    <li><a href="#modelo">Modelo de Parceria</a></li>
+                    <li><a href="#modalidades">Modalidades</a></li>
+                    <li><a href="#ganhos">Simulador de Ganhos</a></li>
+                    <li><a href="#">Portal do Parceiro</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Treinamentos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul>
+                    <li style="color: var(--text-muted); margin-bottom: 0.5rem;">📧 parceiros@multset.com</li>
+                    <li style="color: var(--text-muted); margin-bottom: 0.5rem;"> (XX) XXXXX-XXXX</li>
+                    <li style="color: var(--text-muted);">Seg-Sex: 9h às 18h</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 MULTSET. Todos os direitos reservados. | <a href="#" style="color: var(--text-muted);">Política de Privacidade</a> | <a href="#" style="color: var(--text-muted);">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Menu Mobile
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Toggle FAQ
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Fecha todos
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Abre o clicado se não estava ativo
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Animação ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Fecha menu mobile se aberto
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 14, 39, 0.98)';
+            } else {
+                header.style.background = 'rgba(10, 14, 39, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>
